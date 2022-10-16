@@ -3,6 +3,7 @@
 public class Home_One {
     /**
      * Реализовать алгоритм пирамидальной сортировки (HeapSort)
+     * метов main точка входа
      */
     public static void main(String args[]) {
         int arr[] = new int[20];
@@ -20,7 +21,9 @@ public class Home_One {
             System.out.print(arr[i] + " ");
         System.out.println();
     }
-
+    /**
+     * метод сортировки чисел
+     */
     public static void sort(int arr[]) {
         int n = arr.length;
         for (int i = n / 2 - 1; i >= 0; i--)
@@ -32,7 +35,9 @@ public class Home_One {
             heap(arr, i, 0);
         }
     }
-
+    /**
+     * сортировка кучи после неких изменений
+     */
     public static void heap(int arr[], int n, int i) {
         int index_left = i * 2 + 1;
         int index_right = i * 2 + 2;
