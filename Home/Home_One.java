@@ -62,14 +62,15 @@ public class Home_One {
      */
     public static void main(String[] args) {
 
-        Scanner iScanner = new Scanner(System.in);
-        System.out.print("n = ");
-        int n = iScanner.nextInt();
-        int T = math(n);
-        for (int i = 0; i <= T; i++){
-            System.out.print(i + " ");
+        try (Scanner iScanner = new Scanner(System.in)) {
+            System.out.print("n = ");
+            int n = iScanner.nextInt();
+            int T = math(n);
+            for (int i = 0; i <= T; i++){
+                System.out.print(i + " ");
+            }
+            System.out.printf("\nTn = %d", T);
         }
-        System.out.printf("\nTn = %d", T);
         }
 
     private static int math(int n) {
