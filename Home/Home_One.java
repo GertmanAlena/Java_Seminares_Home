@@ -62,19 +62,21 @@ public class Home_One {
      */
     public static void main(String[] args) {
 
-    Scanner iScanner = new Scanner(System.in);
-    System.out.print("n = ");
-    int n = iScanner.nextInt();
-    int T = n * (n+1) / 2;
-    for (int i = 1; i <= n; i++){
-        System.out.print(i + " ");
-    }
-    System.out.printf("\nTn = %d", T);
-    // System.out.printf("Tn = %d\n", T);
-    // for (int i = 1; i <= n; i++){
-    // String s = "*".repeat(i);
-    // System.out.println(s);
-    // }
-    iScanner.close();
-    }
+        Scanner iScanner = new Scanner(System.in);
+        System.out.print("n = ");
+        int n = iScanner.nextInt();
+        int T = math(n);
+        for (int i = 0; i <= T; i++){
+            System.out.print(i + " ");
+        }
+        System.out.printf("\nTn = %d", T);
+        }
+
+    private static int math(int n) {
+        if (n == 1) return n;
+        else return n + math(n - 1);
+        }
+
 }
+
+    
