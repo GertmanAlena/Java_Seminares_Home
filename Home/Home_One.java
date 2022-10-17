@@ -69,7 +69,7 @@ public class Home_One {
     for (int i = 1; i <= n; i++){
         System.out.print(i + " ");
     }
-    System.out.printf("\nTn = %d\n", T);
+    System.out.printf("\nTn = %d", T);
     // System.out.printf("Tn = %d\n", T);
     // for (int i = 1; i <= n; i++){
     // String s = "*".repeat(i);
