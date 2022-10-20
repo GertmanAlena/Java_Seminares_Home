@@ -38,6 +38,9 @@ public class Home2 {
 
     // Реализовать алгоритм сортировки вставками
 
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
         int arr[] = new int[] { 5, 77, 2, 1, 3, 5, 8, 12, 7 }; // 1 , 2 , 5 , 77 ,  ,
                                                                            // 1
