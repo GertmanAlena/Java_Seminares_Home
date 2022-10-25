@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.lang.model.util.ElementScanner14;
 
 public class One_seminar {
     public static List<Integer> next_step = new ArrayList<Integer>();
