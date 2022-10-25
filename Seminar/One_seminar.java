@@ -27,16 +27,29 @@ public class One_seminar {
                 {  0,  0,  0,  0,  0,  0,  0,  0,  0 }, // 8
         };
         print(lab);
-        int i = 3;
-        int j = 0;
-        lab[i][j] = 1;
+        search_start(lab);
+        // int i = 3;
+        // int j = 0;
+        // lab[i][j] = 1;
 
-        step(lab, i, j);
+        // step(lab, i, j);
         print2(lab);
  
         start_out(lab, x1, x2);
-        System.out.printf("\nпо короткому пути до выхода %d шагов", x1);
+        System.out.printf("\n \033[3;36;44mпо короткому пути до выхода %d шагов\033[0m", x1);
         print_finish(lab);
+    }
+
+    private static void search_start(int[][] lab) {
+        for (int i = 0; i < lab.length; i++) {
+            for (int j = 0; j < lab[i].length; j++) {
+                if (lab[i][j] == -3){
+                    lab[i][j] = 1;
+                    step(lab, i, j);
+                }
+            }
+            
+        }
     }
 
     /**
