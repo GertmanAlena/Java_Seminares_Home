@@ -32,7 +32,7 @@ public class home_labirint {
         print2(lab);
 
         start_out(lab, x1, x2);
-        System.out.printf("\nпо короткому пути до выхода %d шагов", x1);
+        System.out.printf("\nпо короткому пути до выхода \033[32m%d\033[0m шагов", x1);
         print_finish(lab);
     }
     /**ищем точку старта -3 иначинаем */
@@ -140,7 +140,7 @@ public class home_labirint {
      * x2 количество шагов на втором пути
      */
     private static void print2(int[][] lab) {
-        System.out.printf("\nпуть x1 = %d шагов, путь x2 = %d шагов", x1, x2);
+        System.out.printf("\n\033[3;36;44mпуть x1 = %d шагов, путь x2 = %d шагов\033[0m", x1, x2);
         System.out.print("\n********************************************************************");
         System.out.println();
         for (int i = 0; i < lab.length; i++) {
@@ -153,7 +153,7 @@ public class home_labirint {
 
     private static void start_out(int[][] lab, int x1, int x2) {
         if (x1 < x2) {
-            System.out.println("идём по пути x1");
+            System.out.println("\n\033[1mидём по пути x1\033[0m");
             i = x1_coord_i;
             j = x1_coord_j;
             lab[i][j] = 0;
@@ -224,11 +224,11 @@ public class home_labirint {
         for (int i = 0; i < lab.length; i++) {
             for (int j = 0; j < lab[i].length; j++) {
                 if (lab[i][j] == 0) {
-                    System.out.printf("@");
+                    System.out.printf("\033[43m@\033[0m");
                 } else if (lab[i][j] == -2) {
                     System.out.printf("▒");
                 } else {
-                    System.out.printf(".");
+                    System.out.printf("\033[46m.\033[0m");
                 }
             }
             System.out.println();
