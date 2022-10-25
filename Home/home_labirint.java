@@ -27,16 +27,25 @@ public class home_labirint {
                 {  0,  0,  0,  0,  0,  0,  0,  0,  0 }, // 8
         };
         print(lab);
-        int i = 3;
-        int j = 0;
-        lab[i][j] = 1;
-
-        step(lab, i, j);
+        search_start(lab);
+        
         print2(lab);
 
         start_out(lab, x1, x2);
         System.out.printf("\nпо короткому пути до выхода %d шагов", x1);
         print_finish(lab);
+    }
+    /**ищем точку старта -3 иначинаем */
+    private static void search_start(int[][] lab) {
+        for (int i = 0; i < lab.length; i++) {
+            for (int j = 0; j < lab[i].length; j++) {
+                if (lab[i][j] == -3){
+                    lab[i][j] = 1;
+                    step(lab, i, j);
+                }
+            }
+            
+        }
     }
 
     /**
