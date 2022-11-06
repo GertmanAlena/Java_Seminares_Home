@@ -1,21 +1,52 @@
 import java.util.LinkedList;
+import java.util.Scanner;
+
+public class my_exe {
+
+    /**удаляем гласные из текста */
+    public static void main(String[] args) {
+        Scanner iScanner = new Scanner(System.in);
+        System.out.println("Введите текст -> ");
+        String text = iScanner.nextLine();
+        String[] gl = {"a", "e", "y", "u", "i", "o"};
+            for (int i = 0; i < gl.length; i++) {
+                text = text.replace(gl[i], "");  //находит в тексте гласную и заменяет её на пустое место
+            }
+        System.out.println(text);
+    }
+}
+    // /**выводим инициалы имени и фамилии */
+    // public static void main(String[] args) {
+    //     Scanner iScanner = new Scanner(System.in);
+    //     System.out.println("Введите имя и фамилию через пробел -> ");
+    //     String name = iScanner.nextLine();
+    //     String[] res = name.split(" ");
+    //     StringBuffer abbrev = new StringBuffer();
+    //     // abbrev.insert(0, res[1].substring(0,1).toUpperCase());
+    //     // abbrev.insert(0, res[0].substring(0,1).toUpperCase());
+    //     // System.out.println(abbrev);
+    //     String a = res[0].substring(0,1).toUpperCase();
+    //     String b = res[1].substring(0,1).toUpperCase();
+    //     System.out.printf("%s.%s",a, b);
+    // }
+//}
 
 // Дан массив целых чисел и ещё одно целое число. Удалите все вхождения этого числа из массива 
     //(пропусков быть не должно).
-public class my_exe {
+// public class my_exe {
 
-    public static void main(String[] args) {
-        LinkedList<Integer> ll = new LinkedList<>();
-        int[] mass = {1, 5, 8, 12, 2, 4, 6, 1};
-        int num = 1;
-        for (int i = 0; i < mass.length; i++) {
-            if (mass[i] != num) {
-                ll.add(mass[i]);
-            }
-        }
-        System.out.println(ll);
-    }
-}
+//     public static void main(String[] args) {
+//         LinkedList<Integer> ll = new LinkedList<>();
+//         int[] mass = {1, 5, 8, 12, 2, 4, 6, 1};
+//         int num = 1;
+//         for (int i = 0; i < mass.length; i++) {
+//             if (mass[i] != num) {
+//                 ll.add(mass[i]);
+//             }
+//         }
+//         System.out.println(ll);
+//     }
+// }
 
 //     // Напишите программу, которая выводит на консоль простые числа в промежутке от [2, 100].
 //     // Используйте для решения этой задачи оператор "%" (остаток от деления) и циклы.
