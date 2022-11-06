@@ -2,20 +2,89 @@
 import java.util.Scanner;
 
 public class my_exe {
-
-    /**удаляем гласные из текста */
+    /**вывести середину слова */
     public static void main(String[] args) {
-        try (Scanner iScanner = new Scanner(System.in)) {
-            System.out.println("Введите текст -> ");
-            String text = iScanner.nextLine();
-            String[] gl = {"a", "e", "y", "u", "i", "o"};
-                for (int i = 0; i < gl.length; i++) {
-                    text = text.replace(gl[i], "");  //находит в тексте гласную и заменяет её на пустое место
-                }
-            System.out.println(text);
-        }
+        Scanner iScanner = new Scanner(System.in);
+        System.out.println("input -> ");
+        String a = iScanner.nextLine();
+        String res = sr_simbol(a);
+        System.out.println(res);
     }
+
+    private static String sr_simbol(String a) {
+        if (a.length() % 2 == 0) {   // qwerty lengs = 6 вывести 3,4  000000 0 000000
+            
+            int x = a.length() / 2;  // фывапрол длина = 8 вывести 4,5
+            String res = a.substring(x-1, x+1);
+            return res;
+        }
+        if (a.length() % 2 != 0) {   // qwert lengs = 5 вывести 3
+            
+            int x = a.length() / 2;  // фыв а про длина = 7 вывести 3
+            String res = a.substring(x, x+1);
+            return res;
+        }
+        return a;
+    }   
+
+// /**сумма цифр между числами */
+//     public static void main(String[] args) {
+//         Scanner iScanner = new Scanner(System.in);
+//         System.out.println("input -> ");
+//         int a = iScanner.nextInt();
+//         System.out.println("input -> ");
+//         int b = iScanner.nextInt();
+//         int sum_num = sum(a,b);
+//         System.out.println(sum_num);
+//     }
+
+//     private static int sum(int a, int b) {
+//         int sum = 0;
+//         if (a < b) {
+//             while (a <= b) {
+//                 sum += a;
+//                 a++;
+//             }
+//             return sum;
+//         }
+//         if (a > b) {
+//             while (a >= b) {
+//                 sum += a;
+//                 a--;
+//             }
+//             return sum;
+//         }
+//         return sum;
+//     }   
 }
+    /**сумма цифр числа - рекурсия */
+    // public static void main(String[] args) {
+    //    Scanner iScanner = new Scanner(System.in);
+    //    System.out.println("Input number -> ");
+    //    int a = iScanner.nextInt();
+    //    int res = sum(a);
+    //    System.out.println(res);
+       
+    // }
+
+    // private static int sum(int a) {
+    //      if (a < 10) return a;
+    //      return a % 10 + sum(a/10);
+    // }
+
+    // /**удаляем гласные из текста */
+    // public static void main(String[] args) {
+    //     try (Scanner iScanner = new Scanner(System.in)) {
+    //         System.out.println("Введите текст -> ");
+    //         String text = iScanner.nextLine();
+    //         String[] gl = {"a", "e", "y", "u", "i", "o"};
+    //             for (int i = 0; i < gl.length; i++) {
+    //                 text = text.replace(gl[i], "");  //находит в тексте гласную и заменяет её на пустое место
+    //             }
+    //         System.out.println(text);
+    //     }
+    // }
+//}
     // /**выводим инициалы имени и фамилии */
     // public static void main(String[] args) {
     //     Scanner iScanner = new Scanner(System.in);
