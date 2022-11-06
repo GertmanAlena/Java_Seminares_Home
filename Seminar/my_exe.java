@@ -4,11 +4,12 @@ import java.util.Scanner;
 public class my_exe {
     /**вывести середину слова */
     public static void main(String[] args) {
-        Scanner iScanner = new Scanner(System.in);
-        System.out.println("input -> ");
-        String a = iScanner.nextLine();
-        String res = sr_simbol(a);
-        System.out.println(res);
+        try (Scanner iScanner = new Scanner(System.in)) {
+            System.out.println("input -> ");
+            String a = iScanner.nextLine();
+            String res = sr_simbol(a);
+            System.out.println(res);
+        }
     }
 
     private static String sr_simbol(String a) {
