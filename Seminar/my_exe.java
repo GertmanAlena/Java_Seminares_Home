@@ -5,14 +5,15 @@ public class my_exe {
 
     /**удаляем гласные из текста */
     public static void main(String[] args) {
-        Scanner iScanner = new Scanner(System.in);
-        System.out.println("Введите текст -> ");
-        String text = iScanner.nextLine();
-        String[] gl = {"a", "e", "y", "u", "i", "o"};
-            for (int i = 0; i < gl.length; i++) {
-                text = text.replace(gl[i], "");  //находит в тексте гласную и заменяет её на пустое место
-            }
-        System.out.println(text);
+        try (Scanner iScanner = new Scanner(System.in)) {
+            System.out.println("Введите текст -> ");
+            String text = iScanner.nextLine();
+            String[] gl = {"a", "e", "y", "u", "i", "o"};
+                for (int i = 0; i < gl.length; i++) {
+                    text = text.replace(gl[i], "");  //находит в тексте гласную и заменяет её на пустое место
+                }
+            System.out.println(text);
+        }
     }
 }
     // /**выводим инициалы имени и фамилии */
