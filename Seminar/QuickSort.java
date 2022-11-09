@@ -1,5 +1,5 @@
 
-public class QwekSort {
+public class QuickSort {
     public static void main(String[] args) {
         Integer[] mass = {1, 8, 4, 3, 9, -4, 56, -8, 7, 5};
             
