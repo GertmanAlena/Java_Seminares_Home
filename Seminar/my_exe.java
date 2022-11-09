@@ -4,83 +4,104 @@ import java.util.Scanner;
 
 public class my_exe {
 
+                            /**в предложении слова из 5 и более букв перевернуть */
+    public static void main(String[] args) {
+        try (Scanner iScanner = new Scanner(System.in)) {
+            System.out.print("input -> ");
+            String text = iScanner.nextLine();
+            String[] new_text = text.split(" ");
+            for (int i = 0; i < new_text.length; i++) {
+                if (new_text[i].length() > 4) {
+                    
+                }
+            }
+            for (int i = 0; i < new_text.length; i++) {
+                System.out.print(new_text[i] + " ");
+            }
+        }
+    }
+
+    
+}  
+
                         /**поделить слово на части по две буквы */
-public static void main(String[] args) {
-    try (Scanner iScanner = new Scanner(System.in)) {
-        System.out.println("input -> ");
-        String a = iScanner.nextLine();
-        del_word(a);
-    }
-}
-
-private static void del_word(String a) {
-    ArrayList<String> slog = new ArrayList<>();
-    if (a.length() % 2 != 0) {
-        a = a + "_";
-    }
-    for (int i = 0; i < a.length()-1; i+=2) {
-        
-        slog.add(a.charAt(i) + String.valueOf(a.charAt(i+1)));
-    }
-    System.out.println(slog);
-}   
-
-                                            // /**вывести середину слова */
-    // public static void main(String[] args) {
-    //     try (Scanner iScanner = new Scanner(System.in)) {
-    //         System.out.println("input -> ");
-    //         String a = iScanner.nextLine();
-    //         String res = sr_simbol(a);
-    //         System.out.println(res);
-    //     }
-    // }
-
-    // private static String sr_simbol(String a) {
-    //     if (a.length() % 2 == 0) {   // qwerty lengs = 6 вывести 3,4  000000 0 000000
-            
-    //         int x = a.length() / 2;  // фывапрол длина = 8 вывести 4,5
-    //         String res = a.substring(x-1, x+1);
-    //         return res;
-    //     }
-    //     if (a.length() % 2 != 0) {   // qwert lengs = 5 вывести 3
-            
-    //         int x = a.length() / 2;  // фыв а про длина = 7 вывести 3
-    //         String res = a.substring(x, x+1);
-    //         return res;
-    //     }
-    //     return a;
-    // }   
-
-// /**сумма цифр между числами */
 //     public static void main(String[] args) {
-//         Scanner iScanner = new Scanner(System.in);
-//         System.out.println("input -> ");
-//         int a = iScanner.nextInt();
-//         System.out.println("input -> ");
-//         int b = iScanner.nextInt();
-//         int sum_num = sum(a,b);
-//         System.out.println(sum_num);
+//         try (Scanner iScanner = new Scanner(System.in)) {
+//             System.out.println("input -> ");
+//             String a = iScanner.nextLine();
+//             del_word(a);
+//         }
 //     }
 
-//     private static int sum(int a, int b) {
-//         int sum = 0;
-//         if (a < b) {
-//             while (a <= b) {
-//                 sum += a;
-//                 a++;
-//             }
-//             return sum;
+//     private static void del_word(String a) {
+//         ArrayList<String> slog = new ArrayList<>();
+//         if (a.length() % 2 != 0) {
+//             a = a + "_";
 //         }
-//         if (a > b) {
-//             while (a >= b) {
-//                 sum += a;
-//                 a--;
-//             }
-//             return sum;
+//         for (int i = 0; i < a.length()-1; i+=2) {
+            
+//             slog.add(a.charAt(i) + String.valueOf(a.charAt(i+1)));
 //         }
-//         return sum;
+//         System.out.println(slog);
 //     }   
-}
+// }
+
+                                            // /**вывести середину слова */
+//     public static void main(String[] args) {
+//         try (Scanner iScanner = new Scanner(System.in)) {
+//             System.out.println("input -> ");
+//             String a = iScanner.nextLine();
+//             String res = sr_simbol(a);
+//             System.out.println(res);
+//         }
+//     }
+
+//     private static String sr_simbol(String a) {
+//         if (a.length() % 2 == 0) {   // qwerty lengs = 6 вывести 3,4  000000 0 000000
+            
+//             int x = a.length() / 2;  // фывапрол длина = 8 вывести 4,5
+//             String res = a.substring(x-1, x+1);
+//             return res;
+//         }
+//         if (a.length() % 2 != 0) {   // qwert lengs = 5 вывести 3
+            
+//             int x = a.length() / 2;  // фыв а про длина = 7 вывести 3
+//             String res = a.substring(x, x+1);
+//             return res;
+//         }
+//         return a;
+//     }   
+// }
+// /**сумма цифр между числами */
+    // public static void main(String[] args) {
+    //     Scanner iScanner = new Scanner(System.in);
+    //     System.out.println("input -> ");
+    //     int a = iScanner.nextInt();
+    //     System.out.println("input -> ");
+    //     int b = iScanner.nextInt();
+    //     int sum_num = sum(a,b);
+    //     System.out.println(sum_num);
+    // }
+
+    // // private static int sum(int a, int b) {
+    //     int sum = 0;
+    //     if (a < b) {
+    //         while (a <= b) {
+    //             sum += a;
+    //             a++;
+    //         }
+    //         return sum;
+    //     }
+    //     if (a > b) {
+    //         while (a >= b) {
+    //             sum += a;
+    //             a--;
+    //         }
+    //         return sum;
+    //     }
+    //     return sum;
+    // }   
+// }
                                              /**сумма цифр числа - рекурсия */
     // public static void main(String[] args) {
     //    Scanner iScanner = new Scanner(System.in);
