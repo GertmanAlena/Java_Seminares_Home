@@ -1,6 +1,4 @@
 // import java.util.LinkedList;
-import java.io.PrintStream;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class my_exe {
