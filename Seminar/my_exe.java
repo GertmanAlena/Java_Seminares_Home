@@ -30,11 +30,10 @@ public class my_exe {
             
         }
     }
+    private static String Up(String word) {
 
-        private static String Up(String word) {
-
-            return word.substring(0, 1).toUpperCase() + word.substring(1);
-        }
+        return word.substring(0, 1).toUpperCase() + word.substring(1);
+    }
 
     
 }  
