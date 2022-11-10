@@ -1,30 +1,45 @@
 // import java.util.LinkedList;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class my_exe {
 
-                            /**в предложении слова из 5 и более букв перевернуть */
+                            /**в предложении ��лова из 5 и более букв перевернут�� */
     public static void main(String[] args) {
         try (Scanner iScanner = new Scanner(System.in)) {
+            // PrintStream ps = new PrintStream(System.out);
             System.out.print("input -> ");
             String text = iScanner.nextLine();
             String[] new_text = text.split(" ");
             for (int i = 0; i < new_text.length; i++) {
+                new_text[i] = Up(new_text[i]);
+                
                 if (new_text[i].length() > 4) {
-                    
+                    char[] array = new_text[i].toCharArray(); // слово перевели в массив
+                    String word_revers = "";
+                    for (int j = array.length-1; j >= 0; j--) {
+                        word_revers = word_revers + array[j];
+                    }
+                    new_text[i] = word_revers;
                 }
             }
             for (int i = 0; i < new_text.length; i++) {
                 System.out.print(new_text[i] + " ");
             }
+            
         }
     }
+
+        private static String Up(String word) {
+
+            return word.substring(0, 1).toUpperCase() + word.substring(1);
+        }
 
     
 }  
 
-                        /**поделить слово на части по две буквы */
+                        /**поделит�� ��лово на ча��ти по две буквы */
 //     public static void main(String[] args) {
 //         try (Scanner iScanner = new Scanner(System.in)) {
 //             System.out.println("input -> ");
@@ -46,7 +61,7 @@ public class my_exe {
 //     }   
 // }
 
-                                            // /**вывести середину слова */
+                                            // /**выве��ти ��ередину ��лова */
 //     public static void main(String[] args) {
 //         try (Scanner iScanner = new Scanner(System.in)) {
 //             System.out.println("input -> ");
@@ -57,22 +72,22 @@ public class my_exe {
 //     }
 
 //     private static String sr_simbol(String a) {
-//         if (a.length() % 2 == 0) {   // qwerty lengs = 6 вывести 3,4  000000 0 000000
+//         if (a.length() % 2 == 0) {   // qwerty lengs = 6 выве��ти 3,4  000000 0 000000
             
-//             int x = a.length() / 2;  // фывапрол длина = 8 вывести 4,5
+//             int x = a.length() / 2;  // фывапрол длина = 8 выве��ти 4,5
 //             String res = a.substring(x-1, x+1);
 //             return res;
 //         }
-//         if (a.length() % 2 != 0) {   // qwert lengs = 5 вывести 3
+//         if (a.length() % 2 != 0) {   // qwert lengs = 5 выве��ти 3
             
-//             int x = a.length() / 2;  // фыв а про длина = 7 вывести 3
+//             int x = a.length() / 2;  // фыв а про длина = 7 выве��ти 3
 //             String res = a.substring(x, x+1);
 //             return res;
 //         }
 //         return a;
 //     }   
 // }
-// /**сумма цифр между числами */
+// /**��умма цифр между чи��лами */
     // public static void main(String[] args) {
     //     Scanner iScanner = new Scanner(System.in);
     //     System.out.println("input -> ");
@@ -102,7 +117,7 @@ public class my_exe {
     //     return sum;
     // }   
 // }
-                                             /**сумма цифр числа - рекурсия */
+                                             /**��умма цифр чи��ла - рекур��и�� */
     // public static void main(String[] args) {
     //    Scanner iScanner = new Scanner(System.in);
     //    System.out.println("Input number -> ");
@@ -117,14 +132,14 @@ public class my_exe {
     //      return a % 10 + sum(a/10);
     // }
 
-                                            // /**удаляем гласные из текста */
+                                            // /**удал��ем гла��ные из тек��та */
     // public static void main(String[] args) {
     //     try (Scanner iScanner = new Scanner(System.in)) {
-    //         System.out.println("Введите текст -> ");
+    //         System.out.println("Введите тек��т -> ");
     //         String text = iScanner.nextLine();
     //         String[] gl = {"a", "e", "y", "u", "i", "o"};
     //             for (int i = 0; i < gl.length; i++) {
-    //                 text = text.replace(gl[i], "");  //находит в тексте гласную и заменяет её на пустое место
+    //                 text = text.replace(gl[i], "");  //находит в тек��те гла��ну�� и замен��ет её на пу��тое ме��то
     //             }
     //         System.out.println(text);
     //     }
@@ -133,7 +148,7 @@ public class my_exe {
                                              // /**выводим инициалы имени и фамилии */
     // public static void main(String[] args) {
     //     Scanner iScanner = new Scanner(System.in);
-    //     System.out.println("Введите имя и фамилию через пробел -> ");
+    //     System.out.println("Введите им�� и фамили�� через пробел -> ");
     //     String name = iScanner.nextLine();
     //     String[] res = name.split(" ");
     //     StringBuffer abbrev = new StringBuffer();
@@ -146,8 +161,8 @@ public class my_exe {
     // }
 //}
 
-// Дан массив целых чисел и ещё одно целое число. Удалите все вхождения этого числа из массива 
-    //(пропусков быть не должно).
+// Дан ма����ив целых чи��ел и ещё одно целое чи��ло. Удалите в��е вхождени�� ��того чи��ла из ма����ива 
+    //(пропу��ков быт�� не должно).
 // public class my_exe {
 
 //     public static void main(String[] args) {
@@ -163,8 +178,8 @@ public class my_exe {
 //     }
 // }
 
-//     // Напишите программу, которая выводит на консоль простые числа в промежутке от [2, 100].
-//     // Используйте для решения этой задачи оператор "%" (остаток от деления) и циклы.
+//     // ��апи��ите программу, котора�� выводит на кон��ол�� про��тые чи��ла в промежутке от [2, 100].
+//     // ����пол��зуйте дл�� ре��ени�� ��той задачи оператор "%" (о��таток от делени��) и циклы.
 // public class my_exe {
 
 //     public static void main(String[] args) {
@@ -186,7 +201,7 @@ public class my_exe {
 
 // }
 
-//     //Заполните массив случайным числами и выведите максимальное, минимальное и среднее значение.
+//     //Заполните ма����ив ��лучайным чи��лами и выведите мак��имал��ное, минимал��ное и ��реднее значение.
 // public class my_exe {
 //     public static double[] random_mass = new double[10];
 //     public static void main(String[] args) {
