@@ -1,27 +1,4 @@
-import java.util.Scanner;
-
-public class my_exe {
-
-    /** сравнение сумм чисел от N и до N */
-    public static void main(String[] args) {
-        int[] array = {2, 1, 3, 1, 3, 2, 1};
-        int index = SearchIndex(array);
-    }
-// 2, 1, 3, 1, 3, 2, 1
-// ind = 1  sum_left = 2
-    private static int SearchIndex(int[] array) {
-        int index = 0;
-        int SumLeft = 0;
-        int SumRigth = 0;
-        for (int i = 1; i < array.length-2; i++) {
-            index = i;
-            for (int j = 0; j < array.length; j++) {
-                
-            }
-        }
-        return index;
-    }
-}
+// import java.util.Scanner;
 
 // public class my_exe {
 
