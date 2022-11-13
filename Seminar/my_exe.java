@@ -2,48 +2,71 @@ import java.util.Scanner;
 
 public class my_exe {
 
-    /** сортировка введённого числа */
+    /** сравнение сумм чисел от N и до N */
     public static void main(String[] args) {
-        Scanner iScanner = new Scanner(System.in);
-        System.out.println("Введите десятизначное число -> ");
-        Integer num = iScanner.nextInt();
-        int[] num_mass = mass_num(num);
-        int[] SortNumMass = sort(num_mass);
-        print(SortNumMass);
+        int[] array = {2, 1, 3, 1, 3, 2, 1};
+        int index = SearchIndex(array);
     }
-
-    private static void print(int[] sortNumMass) {
-        for (int j = 0; j < sortNumMass.length; j++) {
-            System.out.print(sortNumMass[j] + ", ");
-        }
-    }
-
-    private static int[] sort(int[] num_mass) {
-        for (int i = 0; i < num_mass.length; i++) {
-            for (int j = 0; j < num_mass.length - 1; j++) {
-                if (num_mass[j] < num_mass[j + 1]) {
-                    int temp = num_mass[j];
-                    num_mass[j] = num_mass[j + 1];
-                    num_mass[j + 1] = temp;
-                }
+// 2, 1, 3, 1, 3, 2, 1
+// ind = 1  sum_left = 2
+    private static int SearchIndex(int[] array) {
+        int index = 0;
+        int SumLeft = 0;
+        int SumRigth = 0;
+        for (int i = 1; i < array.length-2; i++) {
+            index = i;
+            for (int j = 0; j < array.length; j++) {
+                
             }
         }
-        return num_mass;
-    }
-
-    private static int[] mass_num(Integer num) {
-        int[] array = new int[10];
-        int i = 0;
-        while (num > 9) {
-            array[i] = num % 10;
-            num = num / 10;
-            i++;
-        }
-
-        array[i] = num;
-        return array;
+        return index;
     }
 }
+
+// public class my_exe {
+
+//     /** сортировка введённого числа */
+//     public static void main(String[] args) {
+//         Scanner iScanner = new Scanner(System.in);
+//         System.out.println("Введите десятизначное число -> ");
+//         Integer num = iScanner.nextInt();
+//         int[] num_mass = mass_num(num);
+//         int[] SortNumMass = sort(num_mass);
+//         print(SortNumMass);
+//     }
+
+//     private static void print(int[] sortNumMass) {
+//         for (int j = 0; j < sortNumMass.length; j++) {
+//             System.out.print(sortNumMass[j] + ", ");
+//         }
+//     }
+
+//     private static int[] sort(int[] num_mass) {
+//         for (int i = 0; i < num_mass.length; i++) {
+//             for (int j = 0; j < num_mass.length - 1; j++) {
+//                 if (num_mass[j] < num_mass[j + 1]) {
+//                     int temp = num_mass[j];
+//                     num_mass[j] = num_mass[j + 1];
+//                     num_mass[j + 1] = temp;
+//                 }
+//             }
+//         }
+//         return num_mass;
+//     }
+
+//     private static int[] mass_num(Integer num) {
+//         int[] array = new int[10];
+//         int i = 0;
+//         while (num > 9) {
+//             array[i] = num % 10;
+//             num = num / 10;
+//             i++;
+//         }
+
+//         array[i] = num;
+//         return array;
+//     }
+// }
 // /**в предложении слова из 5 и более букв перевернуть */
 // public static void main(String[] args) {
 // try (Scanner iScanner = new Scanner(System.in)) {
