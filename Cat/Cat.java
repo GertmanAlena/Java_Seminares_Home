@@ -1,6 +1,6 @@
 package Cat;
 
-import java.util.HashSet;
+// import java.util.HashSet;
 import java.util.LinkedList;
 
 public class Cat {
