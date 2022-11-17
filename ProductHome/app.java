@@ -10,7 +10,7 @@ class Products {
     String val;
 
     public ProxyName(String v) {
-      this.val = v != null ? v : "EMPTY";
+      // this.val = v != null ? v : "EMPTY";
 
       if (v != null)
         this.val = v;
@@ -24,56 +24,25 @@ class Products {
   }
 
   public Products(String name) {
-    this.name = new ProxyName(new ProxyName(name).getVal()).getVal();
+      this.name = new ProxyName(new ProxyName(name).getVal()).getVal();
+  
   }
+  // public int getCount() {
+  //   return count;
+  // }
 
-  public Products(String name, double price) {
-    this.name = name;
-    this.price = price;
-  }
+  // public String getName() {
+  //   return name;
+  // }
 
-  public Products(int count, String name) {
-    this.count = count;
-    this.name = name;
-  }
+  // public double getPrice() {
+  //   return price;
+  // }
 
-  public Products(int count, String name, double price) {
-    this.count = count;
-    this.name = name;
-    this.price = price;
-  }
+  // public StringBuilder getDescription() {
+  //   return description;
+  // }
 
-  public int getCount() {
-    return count;
-  }
-
-  public void setCount(int count) {
-    this.count = count;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public double getPrice() {
-    return price;
-  }
-
-  public void setPrice(double price) {
-    this.price = price;
-  }
-
-  public StringBuilder getDescription() {
-    return description;
-  }
-
-  public void setDescription(StringBuilder description) {
-    this.description = description;
-  }
 }
 
   public class app {
@@ -82,9 +51,22 @@ class Products {
       currentProduct = new CreateProduct()
                       .setCount(5)
                       .setName("box")
+                      .setDescription("картонная коробка")
+                      .setPrice(200)
                       .Create();
-      currentProduct.print();
+                currentProduct.print();
       
-      
+      currentProduct = new CreateProduct()
+                .setName("pen")
+                .setCount(150)
+                .setDescription("Красные шариковые ручки")
+                .Create();
+                currentProduct.print();
+
+      currentProduct = new CreateProduct()
+                .setName("t")
+                .Create();
+                currentProduct.print();
+
     }
 }

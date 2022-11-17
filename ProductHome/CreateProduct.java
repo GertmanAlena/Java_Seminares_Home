@@ -6,33 +6,38 @@ public class CreateProduct {
 
     public CreateProduct() {
         temp = new Product();
-        temp.count = -1;
-        temp.price = -1;
-        temp.name = "--";
-        temp.description = null;
+        temp.count = CONST2.NIL_VALUE;
+        temp.price = CONST2.NIL_VALUE;
+        temp.name = CONST2.EMPTY;
+        temp.description = CONST2.EMPTY;
     }
 
     public CreateProduct setCount(int count) {
+        
         temp.count = count;
         return this;
     }
-
     public CreateProduct setPrice(int price) {
         temp.price = price;
         return this;
     }
 
     public CreateProduct setName(String name) {
-        temp.name = name;
-        return this;
+        if (name.length() > 2) {
+            
+            temp.name = name;
+            return this;
+        }
+        else {
+            temp.name = "поняла где прописать условие";
+            return this;
+        }
     }
 
-    public CreateProduct setDescription(StringBuilder description) {
+    public CreateProduct setDescription(String description) {
         temp.description = description;
         return this;
     }
-
-    // #endregion
 
     public Product Create() {
         return temp;
