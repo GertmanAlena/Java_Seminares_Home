@@ -67,6 +67,11 @@ class Products {
                 .setName("t")
                 .Create();
                 currentProduct.print();
+      currentProduct = new CreateProduct()
+                .setName("cats")
+                .setCount(1005)
+                .Create();
+                currentProduct.print();
 
     }
 }

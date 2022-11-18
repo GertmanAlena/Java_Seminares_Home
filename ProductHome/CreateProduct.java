@@ -11,13 +11,18 @@ public class CreateProduct {
         temp.name = CONST2.EMPTY;
         temp.description = CONST2.EMPTY;
     }
-
+    
     public CreateProduct setCount(int count) {
-        
+        if (count > 1000) {
+            setDescription("отдельный склад");
+            temp.count = count;
+            return this;
+        }
         temp.count = count;
         return this;
     }
     public CreateProduct setPrice(int price) {
+        
         temp.price = price;
         return this;
     }
@@ -37,6 +42,7 @@ public class CreateProduct {
     public CreateProduct setDescription(String description) {
         temp.description = description;
         return this;
+        
     }
 
     public Product Create() {
